@@ -1,0 +1,30 @@
+# --- Claude Code and editors -------------------------------------------------
+.claude/
+.vscode/
+.idea/
+
+# --- OS junk -----------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Python ------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# --- Scratch and test output -------------------------------------------------
+python/_*
+*.tmp
+*.log
+
+# --- Generated audio ---------------------------------------------------------
+# Reproducible with `python build.py` (fig_sound*.py). The soundtracks that the story
+# uses are already inside site/assets/inspiral_chirp.mp4 and bowl_resonance.mp4.
+audio/
+
+# --- Original paper files (kept locally, not in the repo) ---------------------
+# The build only needs the pieces copied into data/ (data/hmc and data/paper_code).
+CQG Paper Files/

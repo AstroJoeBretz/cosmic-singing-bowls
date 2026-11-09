@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cosmic Singing Bowls</title>
+<meta name="description" content="Neutron stars sing when their companion's orbit matches their natural tone. A small mistake about that tone can skew what we learn about matter at its densest.">
+<meta name="theme-color" content="#FAF7F2">
+<meta property="og:title" content="Cosmic Singing Bowls">
+<meta property="og:description" content="Neutron stars sing when their companion's orbit matches their natural tone. A small mistake about that tone can skew what we learn about matter at its densest.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://astrojoebretz.github.io/cosmic-singing-bowls/">
+<meta property="og:image" content="https://astrojoebretz.github.io/cosmic-singing-bowls/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A mallet circling a singing bowl beside two orbiting neutron stars: Cosmic Singing Bowls">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://astrojoebretz.github.io/cosmic-singing-bowls/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M3 12h26c0 9-6 15-13 15S3 21 3 12z' fill='%231F4E5A'/%3E%3Ccircle cx='24' cy='8' r='3.5' fill='%23B5523B'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to the story</a>
+<div id="progress" aria-hidden="true"></div>
+
+<header class="hero">
+  <div>
+    <div class="kicker">A story about gravitational waves</div>
+    <h1>Cosmic Singing Bowls</h1>
+    <p class="lede">When two neutron stars spiral together, each one "sings" like a Tibetan bowl. Getting the pitch slightly wrong changes what we think is inside them.</p>
+    <div class="byline">Based on research by Joseph Bretz and Hang Yu, Montana State University</div>
+    <div class="scroll-cue">Scroll to begin &darr;</div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- 1 -->
+<section class="chapter" id="listen">
+  <div class="inner reveal">
+    <div class="kicker">1 &middot; The signal</div>
+    <h2>Listening to two dead stars</h2>
+    <p>In 2017, detectors on Earth felt a faint stretch and squeeze of space itself. It was the last 100 seconds of two neutron stars, each about as wide as a city, circling each other faster and faster until they collided.</p>
+    <p>That ripple, a gravitational wave, is a chirp: it rises in pitch as the stars close in. Hidden in its shape is information about what the stars are made of.</p>
+  </div>
+  <div class="wide reveal"><figure>
+    <video autoplay muted loop playsinline preload="metadata" data-audio poster="assets/inspiral_chirp_poster.png" aria-label="Two neutron stars spiral together while the gravitational-wave signal rises in pitch and strength">
+      <source src="assets/inspiral_chirp.mp4" type="video/mp4">
+    </video>
+    <figcaption>Illustration (slowed down): two neutron stars spiral together, and the gravitational-wave signal rises in pitch and strength. Real orbits in these last moments run tens to hundreds of times per second. Turn the sound on to hear a computed (not recorded) version of the signal: the rumble rises in pitch and ends at contact.</figcaption>
+  </figure></div>
+  <div class="inner reveal"><p class="takeaway">The chirp is a recording of the stars' final dance, and we can read it.</p></div>
+</section>
+
+<!-- 2 -->
+<section class="chapter" id="star">
+  <div class="inner reveal">
+    <div class="kicker">2 &middot; The star</div>
+    <h2>A teaspoon that weighs a mountain</h2>
+    <p>A neutron star packs more than the Sun's mass into a ball about 23 km across, so dense that a teaspoon of it would weigh as much as a mountain. In its core, matter is squeezed beyond the density of an atomic nucleus, a regime no laboratory can reproduce.</p>
+    <p>How matter behaves there is set by its <em>equation of state</em>. A stiff equation of state gives a larger, puffier star; a soft one gives a smaller, tighter star. Nobody knows which is right, and that is exactly what we want to find out.</p>
+  </div>
+  <div class="wide reveal"><figure>
+    <div class="pair">
+      <img src="assets/star_cutaway.png" alt="Cutaway of a neutron star showing a thin crust, an outer core and an inner core" loading="lazy">
+      <img src="assets/soft_vs_stiff.png" alt="Two neutron stars of the same mass: a larger one made of stiff matter and a smaller one made of soft matter" loading="lazy">
+    </div>
+    <figcaption>Illustrations. Left: a neutron star's layers (not to scale). Right: the stiffer the matter, the larger the star at the same mass.</figcaption>
+  </figure></div>
+  <div class="inner reveal"><p class="takeaway">Measuring a neutron star's stiffness tells us about matter at its densest.</p></div>
+</section>
+
+<!-- 3 -->
+<section class="chapter" id="tides">
+  <div class="inner reveal">
+    <div class="kicker">3 &middot; The squeeze</div>
+    <h2>Squeezed by a neighbor</h2>
+    <p>As the two stars draw close, each one's gravity stretches the other, the way the Moon raises tides in our oceans. A soft star stretches more; a stiff star stretches less.</p>
+    <p>That stretchiness is called the <em>tidal deformability</em>, and it leaves a small, measurable shift in the gravitational-wave chirp. It is our squishiness meter.</p>
+  </div>
+  <div class="wide reveal"><figure>
+    <div class="widget" id="tidew">
+      <div class="rt-fallback">
+        <img src="assets/tidal_deformation.png" alt="Pairs of soft stars and pairs of stiff stars, each star stretched toward its partner more and more as the separation shrinks; the soft stars stretch much more" loading="lazy">
+      </div>
+      <div class="rt-ui">
+        <h3 class="rt-title">Squeeze the stars together</h3>
+        <p class="rt-help">Drag the slider to bring each pair closer, or press play. Both stars in a pair pull on each other, and both stretch.</p>
+        <canvas id="tide-canvas" role="img" aria-label="Two pairs of stars: soft stars stretching strongly and stiff stars stretching weakly as the separation changes"></canvas>
+        <div class="rt-controls">
+          <div><label for="tide-sep">Separation: <span class="tide-end">far apart &rarr; about to merge</span></label>
+            <input id="tide-sep" type="range" min="0" max="100" step="1" value="25"></div>
+          <div class="rt-presets"><button type="button" id="tide-play">Play animation</button></div>
+        </div>
+        <p class="readout" id="tide-readout" aria-live="off"></p>
+      </div>
+    </div>
+    <figcaption>Illustration (stretching exaggerated). Tidal stretching grows rapidly as the stars approach, and the soft stars stretch far more than the stiff ones.</figcaption>
+  </figure></div>
+  <div class="inner reveal"><p class="takeaway">Tidal deformability is the main property we use to narrow down the equation of state.</p></div>
+</section>
+
+<!-- 4 -->
+<section class="chapter" id="bowls">
+  <div class="inner reveal">
+    <div class="kicker">4 &middot; The song</div>
+    <h2>Stars sing like bowls</h2>
+    <p>A Tibetan singing bowl stays silent until you rub a mallet around its rim. Rub too slowly or too fast and you get a weak murmur; rub at just the right rate, matching the bowl's natural tone, and it rings out loud.</p>
+  </div>
+  <div class="wide reveal"><figure>
+    <video autoplay muted loop playsinline preload="metadata" poster="assets/bowl_star_analogy_poster.png" aria-label="Left: a suede-wrapped mallet circles a singing bowl and its rim bulges to follow it. Right: a companion star orbits a neutron star and the star's surface bulges to follow it.">
+      <source src="assets/bowl_star_analogy.mp4" type="video/mp4">
+    </video>
+    <div class="pair-captions">
+      <p><strong>A <span class="drv">mallet</span> circles the bowl</strong><br>and its rim bulges to follow it</p>
+      <p><strong>A <span class="drv">companion star</span> orbits</strong><br>and the star's surface bulges to follow it</p>
+    </div>
+    <figcaption>Illustration (bulges exaggerated). In both systems something circles and raises a bulge that follows it: the mallet in the bowl's rim, the companion in the star's surface. Teal is the bowl and the star; clay is the mallet and the companion.</figcaption>
+  </figure></div>
+  <div class="inner reveal">
+    <p>A neutron star is the bowl, and its orbiting companion is the mallet circling the rim. The star's natural tone, or pitch, is its <em>fundamental mode</em>. As the orbit speeds up, the "rubbing rate" sweeps upward until it matches that tone: <strong>tidal resonance</strong>. The star sings, and the song leaves a strong mark on the gravitational waves.</p>
+  </div>
+  <div class="wide reveal"><figure>
+    <video autoplay muted loop playsinline preload="metadata" data-audio poster="assets/bowl_resonance_poster.png" aria-label="A mallet circles a bowl's rim faster and faster; the bowl rings loudest when the rate matches its natural tone">
+      <source src="assets/bowl_resonance.mp4" type="video/mp4">
+    </video>
+    <figcaption>Illustration. As the mallet speeds up, the bowl rings louder until the rate matches its natural tone, then fades again. A star's orbit has the same effect. Turn the sound on to hear the pitch climb and the loudness peak at the bowl's tone.</figcaption>
+  </figure></div>
+  <div class="inner reveal"><p class="takeaway">Where the star sings, and how loudly, depends on its exact pitch.</p></div>
+</section>
+
+<!-- 5 -->
+<section class="chapter" id="pitch">
+  <div class="inner reveal">
+    <div class="kicker">5 &middot; The catch</div>
+    <h2>Is the bowl's pitch what we think?</h2>
+    <p>Analyses usually assume the star's pitch from a textbook shortcut tied to its squishiness (tidal deformability); call that the <em>textbook model</em>. For a typical star that pitch lies just beyond the moment of merger, so the stars collide before the bowl reaches full voice. But the song is already building as they approach, and a real star in a real binary is <em>retuned</em> by effects that shortcut leaves out, pulling the pitch closer or pushing it away:</p>
+  </div>
+  <div class="inner reveal">
+    <div class="callouts">
+      <div class="card"><h3>Nonlinear motion</h3>Near merger the sloshing is large, not gentle, and the pitch drops, more and more as the stars close in.</div>
+      <div class="card"><h3>Spin</h3>A spinning star's pitch shifts up or down by a fixed amount, depending on its spin direction.</div>
+      <div class="card"><h3>Relativity</h3>Redshift and frame dragging combine to nudge the pitch slightly upward.</div>
+    </div>
+  </div>
+  <div class="wide reveal"><figure>
+    <div class="widget" id="retune">
+      <div class="rt-fallback">
+        <img src="assets/trc_phase_shifts.png" alt="Change in the gravitational-wave phase caused by nonlinear motion, spin and relativity, relative to the textbook model" loading="lazy">
+      </div>
+      <div class="rt-ui">
+        <h3 class="rt-title">Retune the bowl</h3>
+        <p class="rt-help">Drag the sliders. The top strip shows where this star's pitch sits compared with the moment of merger; the plot shows how its gravitational-wave signal drifts away from the textbook model's.</p>
+        <canvas id="rt-dial" role="img" aria-label="Where the star's pitch lies relative to merger"></canvas>
+        <canvas id="rt-plot" role="img" aria-label="Phase change versus frequency"></canvas>
+        <div class="rt-controls">
+          <div><label for="rt-spin">Spin: <span id="rt-spin-val"></span></label>
+            <input id="rt-spin" type="range" min="-300" max="300" step="10" value="0"></div>
+          <div><label for="rt-nl">Nonlinear motion: <span id="rt-nl-val"></span></label>
+            <input id="rt-nl" type="range" min="0" max="200" step="5" value="0"></div>
+          <div class="rt-gr"><label><input id="rt-gr" type="checkbox"> Include relativity</label></div>
+        </div>
+        <div class="rt-presets">
+          <button type="button" data-preset="0,100,0">Nonlinear</button>
+          <button type="button" data-preset="-200,0,0">Spin against orbit</button>
+          <button type="button" data-preset="200,0,0">Spin with orbit</button>
+          <button type="button" data-preset="0,0,1">Relativity</button>
+          <button type="button" data-preset="0,0,0">Reset</button>
+        </div>
+        <p class="readout" id="rt-readout" aria-live="off"></p>
+      </div>
+    </div>
+    <figcaption>Computed with the paper's waveform model for a typical pair of neutron stars. "Typical" nonlinear motion is the paper's value; spin is shown in hertz of rotation. You can combine effects here, although the paper studies them one at a time.</figcaption>
+  </figure></div>
+  <div class="inner reveal"><p class="takeaway">A slightly wrong pitch shifts where the star sings, and the chirp records it.</p></div>
+</section>
+
+<!-- 6 -->
+<section class="chapter" id="test">
+  <div class="inner reveal">
+    <div class="kicker">6 &middot; The test</div>
+    <h2>Fooling our own analysis, on purpose</h2>
+    <p>We simulated a signal that includes the <em>nonlinear retuning</em> of the pitch. Then we analyzed it with the textbook model, the one that assumes the <em>textbook pitch</em>, and checked what it concluded about the star.</p>
+    <p>The fit uses <em>Hamiltonian Monte Carlo</em>, which you can picture as a ball rolling over a landscape of how well each guess explains the signal. Where the ball spends its time is what the data support.</p>
+  </div>
+  <div class="wide reveal"><figure>
+    <video autoplay muted loop playsinline preload="metadata" poster="assets/hmc_sampler_poster.png" aria-label="A sampler wanders over possible values of the star's squishiness and mass ratio while a histogram of its visits builds up">
+      <source src="assets/hmc_sampler.mp4" type="video/mp4">
+    </video>
+    <figcaption>Real samples from one of the paper's runs, shown in the order the sampler produced them. Each dot is one guess for the star's squishiness and the mass ratio of the two stars. This run fits the textbook model to a simulated signal that includes the nonlinear retuning. The dashed line is the value we put in.</figcaption>
+  </figure></div>
+  <div class="inner reveal"><p class="takeaway">We know the true answer, so we can see exactly how wrong the textbook model gets it.</p></div>
+</section>
+
+<!-- 7 -->
+<section class="chapter" id="bias">
+  <div class="inner reveal">
+    <div class="kicker">7 &middot; The result</div>
+    <h2>The textbook model gets it wrong</h2>
+    <p>Leaving out the nonlinear retuning, the analysis reads the star as about <strong>8% squishier</strong> than it truly is. This sits on top of an earlier known error of roughly 30% from ignoring resonance altogether.</p>
+    <p>Why? The model ties the star's pitch to its squishiness. If the pitch is mis-assumed, the error gets passed straight into the squishiness, and from there into the equation of state.</p>
+  </div>
+  <div class="inner reveal">
+    <div class="stats">
+      <div class="stat"><div class="num">+8%</div><div class="lbl">bias in tidal deformability (432 vs. 400)</div></div>
+      <div class="stat"><div class="num">&minus;10%</div><div class="lbl">error in the pitch when it is left free</div></div>
+      <div class="stat"><div class="num">0.1 km</div><div class="lbl">radius precision needed to tell equations of state apart</div></div>
+    </div>
+  </div>
+  <div class="wide reveal"><figure>
+    <img src="assets/posterior_lambda.png" alt="Two distributions of the measured tidal deformability: the textbook model's sits above the true value, while the model that includes the effect covers it" loading="lazy">
+    <figcaption>Real posterior samples from the paper's simulations, for a very loud signal (signal-to-noise ratio 500). The textbook model (teal) is pushed above the true value. The model that includes the effect (clay) is broader and covers it.</figcaption>
+  </figure></div>
+  <div class="inner reveal">
+    <p>How loud does a signal need to be before this matters? Loudness is measured by the <em>signal-to-noise ratio</em> (SNR); the first detected graviational waves from a neutron-star merger, GW170817, had an SNR of about 30. A louder signal narrows the uncertainty, but the bias stays put. Try it:</p>
+  </div>
+  <div class="wide reveal"><figure>
+    <div class="widget" id="snrw">
+      <div class="rt-fallback"><p class="readout">Interactive version needs JavaScript. In short: the textbook model's best-fit answer is off by about +32 (432 vs. 400), and the uncertainty only drops below that once the signal-to-noise ratio is a couple of hundred.</p></div>
+      <div class="rt-ui">
+        <h3 class="rt-title">Turn up the signal</h3>
+        <canvas id="snr-plot" role="img" aria-label="Posterior of tidal deformability narrowing as signal-to-noise ratio grows, with the true value marked"></canvas>
+        <div class="rt-controls"><div><label for="snr-slider">Signal-to-noise ratio: <span id="snr-val"></span></label>
+          <input id="snr-slider" type="range" min="0" max="100" step="1" value="60"></div></div>
+        <p class="readout" id="snr-readout" aria-live="off"></p>
+      </div>
+    </div>
+    <figcaption>Approximation built from the real SNR-500 samples: the width is rescaled in proportion to 1/SNR about the best-fit value (432, which is +32 from the true 400), and the bias is held fixed. The paper finds the bias exceeds the statistical error from about SNR 100 to 200, depending on what else is fit.</figcaption>
+  </figure></div>
+  <div class="inner reveal">
+    <h3 class="subhead">Where does the error come from?</h3>
+    <p>We repeated the fit but let the star's pitch float freely instead of tying it to its squishiness. Now the squishiness comes out right, and the <em>pitch</em> is the quantity that is off, too low by roughly a tenth. The textbook model hides that pitch error by passing it into the squishiness.</p>
+  </div>
+  <div class="wide reveal"><figure>
+    <img src="assets/pitch_vs_squish.png" alt="With the pitch left free, the squishiness posterior covers the true value while the pitch posterior sits below its true value" loading="lazy">
+    <figcaption>Real samples, pitch left free. Left: the squishiness is recovered. Right: the pitch is too low (best fit about 10% below the true value in the paper).</figcaption>
+  </figure></div>
+  <div class="inner reveal"><p class="takeaway">A small wrong assumption about the pitch becomes a systematic error in the star's squishiness.</p></div>
+</section>
+
+<!-- 8 -->
+<section class="chapter" id="many">
+  <div class="inner reveal">
+    <div class="kicker">8 &middot; The reach</div>
+    <h2>Many quiet voices</h2>
+    <p>One extremely loud event can reveal the effect, but events that loud are expected to be uncommon. Combining many events helps: stack 16 events, and the statistical uncertainty shrinks until the bias stands out clearly.</p>
+  </div>
+  <div class="wide reveal"><figure>
+    <video autoplay muted loop playsinline preload="metadata" poster="assets/stacking_poster.png" aria-label="Sixteen wide distributions are multiplied together into one narrow distribution that sits above the true value">
+      <source src="assets/stacking.mp4" type="video/mp4">
+    </video>
+    <figcaption>Real samples: 16 simulated events (each SNR 175, different star masses), fit with the textbook model. Each faint curve is one event; the clay curve is them stacked. It becomes sharp, but it sits off the true value.</figcaption>
+  </figure></div>
+  <div class="inner reveal">
+    <p>Different effects need different loudness to show up at all. This chart, from the paper's Table 2, shows the SNR at which each effect becomes distinguishable in three next-generation detectors.</p>
+  </div>
+  <div class="wide reveal"><figure>
+    <img src="assets/detectability.png" alt="Dot chart of the signal-to-noise ratio needed to detect nonlinear motion, spin against and with the orbit, and relativity in three detectors; relativity needs the most" loading="lazy">
+    <figcaption>Values and ranges from the paper's detectability table. Dots mark central estimates; bars show the range across plausible equations of state and spin rates. Relativity has no range quoted.</figcaption>
+  </figure></div>
+  <div class="inner reveal">
+    <div class="callouts">
+      <div class="card"><h3>Spin</h3>Spin can mimic a different pitch almost perfectly, so the waveforms look nearly identical. Used cleverly, it could also measure a star's moment of inertia from gravitational waves alone.</div>
+      <div class="card"><h3>Relativity</h3>Redshift and frame dragging partly cancel, so this effect is the hardest to spot and needs a very loud signal.</div>
+    </div>
+    <p class="takeaway">Next-generation detectors are expected to reach the loudness where these effects matter.</p>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="chapter" id="matters">
+  <div class="inner reveal">
+    <div class="kicker">9 &middot; The point</div>
+    <h2>Why it matters</h2>
+    <p>Pinning down the equation of state means measuring a neutron star's radius to within about a tenth of a kilometer. A systematic error of 8% in squishiness is enough to wash that out.</p>
+    <p>Our recommendation: do not blindly lean on the textbook link between a star's pitch and its squishiness. Treat the pitch as something to measure, or build in the retuning effects.</p>
+    <details class="deeper">
+      <summary>Go deeper: what this study does and does not claim</summary>
+      <p>This is a proof-of-principle study. To isolate each effect we used simplified stars (all with the same radius, and a Newtonian treatment of the nonlinear motion), took one effect at a time, and used noise-free simulated signals. No waveform model yet includes every effect at full accuracy, so the numbers say how much these effects can matter, not exactly how much they will.</p>
+      <p>The nonlinear effect is, if anything, understated here: the paper drops a correction that would make the bias larger.</p>
+    </details>
+    <p>The stars are singing. We just need to be sure we know which note we are listening for.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="links">
+    <a class="btn" href="https://arxiv.org/abs/2602.04951" rel="noopener">Read the paper</a>
+    <a class="btn ghost" href="https://github.com/AstroJoeBretz/cosmic-singing-bowls" rel="noopener">Code and data</a>
+    <a class="btn ghost" href="https://astrojoebretz.github.io/">All stories</a>
+  </div>
+  <div>Joseph Bretz and Hang Yu, Department of Physics, Montana State University. Supported by NSF grants PHY-2308415 and PHY-2541579 and Montana NASA EPSCoR.</div>
+  <div class="ack">The code for this visual story was generated by Claude Sonnet 5.5 (Anthropic).</div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/widget_retune.js"></script>
+<script src="js/widget_snr.js"></script>
+<script src="js/widget_tides.js"></script>
+</body>
+</html>
